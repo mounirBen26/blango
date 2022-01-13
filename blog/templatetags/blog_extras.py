@@ -39,6 +39,14 @@ def endrow():
     return format_html("</div>")
     return "</div>"
 
+@register.simple_tag
+def col():
+    return '<div class="col">'
+
+
+@register.simple_tag
+def endcol():
+    return "</div>"
 
 @register.inclusion_tag("blog/post-list.html")
 def recent_posts(post):
